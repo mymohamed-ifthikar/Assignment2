@@ -15,15 +15,15 @@ Steps
 
   dockerfile
   
-  # Use the official Python image from the Docker Hub
+  #Use the official Python image from the Docker Hub
   FROM python:3.9-slim
-  # Set the working directory in the container
+  #Set the working directory in the container
   WORKDIR /app
-  # Copy the Python script into the container
+  #Copy the Python script into the container
   COPY app.py .
-  # Install the zoneinfo package for time zone support
+  #Install the zoneinfo package for time zone support
   RUN pip install tzdata
-  # Expose the port the app runs on
+  #Expose the port the app runs on
   
 # Build and Push Docker Image:
   bash
