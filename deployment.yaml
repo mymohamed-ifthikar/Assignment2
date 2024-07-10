@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yasirifthikar-prj2-deployment
+  labels:
+    app: yasirifthikar-prj2-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yasirifthikar-prj2-app
+  template:
+    metadata:
+      labels:
+        app: yasirifthikar-prj2-app
+    spec:
+      containers:
+      - name: yasirifthikar-prj2-container
+        image: yasirifthikar/prj2:latest
+        ports:
+        - containerPort: 3030
